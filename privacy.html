@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Notice — Caledonian Psychiatry</title>
+<meta name="description" content="Privacy notice for Caledonian Psychiatry. How we collect, use, store and protect your personal and health data. UK GDPR compliant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #2a3d5e;
+    --navy-deep: #111c33;
+    --cream: #f8f6f1;
+    --cream-warm: #f3efe8;
+    --sage: #6e9484;
+    --sage-light: #96b8a8;
+    --sage-pale: #e4eeea;
+    --sage-dark: #4a7264;
+    --rust: #b8886f;
+    --text-dark: #2c2c2c;
+    --text-mid: #5a5a5a;
+    --text-light: #8a8a8a;
+    --white: #ffffff;
+    --border: #e2ddd5;
+    --shadow: rgba(26, 39, 68, 0.08);
+    --shadow-lg: rgba(26, 39, 68, 0.12);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* ── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248, 246, 241, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    border-bottom-color: var(--border);
+    box-shadow: 0 2px 24px var(--shadow);
+  }
+  .nav-inner {
+    max-width: 1240px; margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 80px; width: 80px; object-fit: contain;
+  }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 1.7rem; font-weight: 500;
+    color: var(--navy); letter-spacing: 0.02em; line-height: 1.2;
+  }
+  .nav-logo-text span {
+    display: block; font-size: 0.75rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--text-mid);
+    font-family: var(--font-body); font-weight: 400;
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+    text-decoration: none; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1.5px; background: var(--sage);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--navy) !important; color: var(--cream) !important;
+    padding: 0.6rem 1.5rem !important; border-radius: 2px;
+    letter-spacing: 0.08em !important; transition: background 0.3s !important;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--navy-light) !important; }
+
+  .nav-hamburger {
+    display: none; cursor: pointer; flex-direction: column;
+    gap: 5px; padding: 4px; z-index: 110;
+  }
+  .nav-hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--navy); transition: 0.3s;
+  }
+  .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+  /* ── PAGE HERO ─────────────────────── */
+  .page-hero {
+    background: var(--cream);
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .page-hero .kicker {
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--sage); margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: 3.2rem; font-weight: 400; color: var(--navy);
+    line-height: 1.2; margin-bottom: 1rem;
+  }
+  .page-hero .subtitle {
+    font-size: 1.1rem; color: var(--text-mid); line-height: 1.8;
+    max-width: 600px; margin: 0 auto 1.5rem;
+  }
+  .page-hero .updated {
+    font-size: 0.82rem; color: var(--text-light);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── POLICY CONTENT ────────────────── */
+  .policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+  .policy-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.9rem; font-weight: 500; color: var(--navy);
+    margin: 3rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    line-height: 1.3;
+  }
+  .policy-content h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .policy-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem; font-weight: 500; color: var(--navy);
+    margin: 2rem 0 0.7rem;
+  }
+  .policy-content p {
+    font-size: 1rem; color: var(--text-mid);
+    line-height: 1.85; margin-bottom: 1rem;
+  }
+  .policy-content ul, .policy-content ol {
+    margin: 0.5rem 0 1.2rem 1.5rem;
+    color: var(--text-mid);
+  }
+  .policy-content li {
+    font-size: 1rem; line-height: 1.8;
+    margin-bottom: 0.4rem;
+    padding-left: 0.3rem;
+  }
+  .policy-content a {
+    color: var(--sage-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s;
+  }
+  .policy-content a:hover {
+    color: var(--navy);
+  }
+  .policy-content strong {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  /* ── POLICY TABLE ──────────────────── */
+  .policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 2rem;
+    font-size: 0.93rem;
+  }
+  .policy-table thead th {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.2rem;
+    text-align: left;
+    border-bottom: 2px solid var(--navy-deep);
+  }
+  .policy-table tbody td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-mid);
+    line-height: 1.7;
+    vertical-align: top;
+  }
+  .policy-table tbody tr:nth-child(even) {
+    background: var(--cream-warm);
+  }
+  .policy-table tbody tr:hover {
+    background: var(--sage-pale);
+  }
+
+  /* ── CONTACT BOX ───────────────────── */
+  .policy-contact-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1.8rem 2rem;
+    margin: 2rem 0;
+  }
+  .policy-contact-box h3 {
+    margin-top: 0;
+  }
+  .policy-contact-box p {
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── FOOTER ─────────────────────────── */
+  footer {
+    background: var(--navy-deep); color: rgba(255,255,255,0.55);
+    padding: 4rem 2rem 2rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: start;
+    padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .footer-brand img {
+    height: 38px; filter: brightness(0) invert(1); opacity: 0.9;
+  }
+  .footer-brand-text {
+    font-family: var(--font-display); font-size: 1.1rem;
+    color: var(--white); font-weight: 500;
+  }
+  .footer-col h4 {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: rgba(255,255,255,0.35);
+    margin-bottom: 1rem;
+  }
+  .footer-col a {
+    display: block; font-size: 0.88rem; color: rgba(255,255,255,0.55);
+    text-decoration: none; margin-bottom: 0.55rem; transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 2rem; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.78rem; }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a {
+    font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    text-decoration: none;
+  }
+  .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ── SCROLLBAR ──────────────────────── */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--sage-light); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--sage); }
+
+  /* ── SELECTION ──────────────────────── */
+  ::selection { background: var(--sage-pale); color: var(--navy); }
+
+  /* ── RESPONSIVE ─────────────────────── */
+  @media (max-width: 968px) {
+    .nav-links {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--cream); flex-direction: column;
+      align-items: center; justify-content: center; gap: 1.8rem;
+    }
+    .nav-links.show { display: flex; z-index: 105; }
+    .nav-links a { font-size: 1.1rem; }
+    .nav-hamburger { display: flex; }
+    .footer-top { flex-direction: column; }
+    .policy-table { font-size: 0.85rem; }
+    .policy-table thead th,
+    .policy-table tbody td { padding: 0.7rem 0.8rem; }
+  }
+  @media (max-width: 600px) {
+    .page-hero { padding: 8rem 1.5rem 3rem; }
+    .page-hero h1 { font-size: 2.2rem; }
+    .policy-content { padding: 3rem 1.5rem 4rem; }
+    .policy-content h2 { font-size: 1.5rem; }
+    .nav-inner { padding: 0.8rem 1.5rem; }
+    .policy-table {
+      display: block; overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry" style="height:80px;width:80px;object-fit:contain;">
+      <div class="nav-logo-text">Caledonian<br>Psychiatry <span>Private psychiatric care</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#how-it-works">Process</a>
+      <a href="index.html#fees">Fees</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">Legal</div>
+    <h1>Privacy Notice</h1>
+    <p class="subtitle">How we collect, use, store and protect your personal information and health data. This notice explains your rights and our obligations under UK data protection law.</p>
+    <p class="updated">Last updated: February 2026</p>
+  </div>
+</section>
+
+<!-- POLICY CONTENT -->
+<div class="policy-content">
+
+  <h2>1. Who we are</h2>
+  <p>Caledonian Psychiatry is the trading name of <strong>Edinburgh Psych Limited</strong>, a company registered in Scotland. We are a private psychiatric practice providing assessment and ongoing care for adults across Scotland.</p>
+  <p>For the purposes of UK data protection legislation (the UK General Data Protection Regulation and the Data Protection Act 2018), the data controller is:</p>
+  <div class="policy-contact-box">
+    <h3>Data controller</h3>
+    <p><strong>Edinburgh Psych Limited</strong> (trading as Caledonian Psychiatry)</p>
+    <p><strong>Registered Manager:</strong> Dr David Crocker</p>
+    <p><strong>Address:</strong> The Lighthouse, Heugh Road, North Berwick, EH39 5PX</p>
+    <p><strong>Email:</strong> <a href="mailto:admin@caledonianpsychiatry.co.uk">admin@caledonianpsychiatry.co.uk</a></p>
+    <p><strong>Telephone:</strong> <a href="tel:07592142000">07592 142000</a></p>
+    <p><strong>ICO registration:</strong> ZB532461</p>
+  </div>
+
+  <h2>2. What information we collect</h2>
+  <p>We collect and process the following categories of personal data:</p>
+
+  <h3>Personal information</h3>
+  <ul>
+    <li>Full name, date of birth, address and contact details</li>
+    <li>Emergency contact details</li>
+    <li>GP name, practice and contact details</li>
+    <li>Proof of identity (verified at the start of each consultation)</li>
+    <li>Payment information (processed securely; we do not store card details)</li>
+  </ul>
+
+  <h3>Special category data (health data)</h3>
+  <ul>
+    <li>Psychiatric and medical history</li>
+    <li>Current symptoms, mental state examination findings and clinical observations</li>
+    <li>Diagnostic assessments and formulations</li>
+    <li>Medication history and current prescriptions</li>
+    <li>Correspondence from other healthcare providers (e.g. GP letters, previous reports)</li>
+    <li>Clinical notes, reports and management plans</li>
+    <li>Risk assessments</li>
+    <li>Collateral information provided by family members or other informants (with your knowledge)</li>
+  </ul>
+
+  <h3>Technical data</h3>
+  <ul>
+    <li>Information generated through the use of our clinical records system (Semble)</li>
+    <li>Secure video consultation connection data (no recordings are made of consultations)</li>
+  </ul>
+
+  <h2>3. How we collect your information</h2>
+  <p>We collect personal information in the following ways:</p>
+  <ul>
+    <li><strong>Directly from you</strong> &mdash; when you contact us, complete referral or registration forms, or during clinical consultations</li>
+    <li><strong>From your GP or other healthcare providers</strong> &mdash; with your consent, we may request clinical correspondence, medical records or previous assessment reports</li>
+    <li><strong>From informants</strong> &mdash; with your knowledge, we may gather collateral history from family members or other individuals relevant to your assessment</li>
+    <li><strong>From our clinical systems</strong> &mdash; data generated during the course of your care, including clinical notes and prescriptions</li>
+  </ul>
+
+  <h2>4. Why we process your information and our lawful bases</h2>
+  <p>We process your personal data for the purposes set out below. For each purpose, we rely on one or more lawful bases under Articles 6 and 9 of the UK GDPR.</p>
+  <p>Because we process <strong>special category data</strong> (health data), we must also satisfy a condition under Article 9. For clinical care, our Article 9 condition is that processing is necessary for the provision of health care (Article 9(2)(h)), supplemented by Schedule 1, Part 1, Paragraph 2 of the Data Protection Act 2018.</p>
+
+  <table class="policy-table">
+    <thead>
+      <tr>
+        <th>Purpose</th>
+        <th>Lawful basis (Article 6)</th>
+        <th>Special category condition (Article 9)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Providing psychiatric assessment, diagnosis and treatment</td>
+        <td>Legitimate interests; consent</td>
+        <td>Provision of health care (Art. 9(2)(h))</td>
+      </tr>
+      <tr>
+        <td>Prescribing medication and issuing prescriptions to pharmacies</td>
+        <td>Legitimate interests; legal obligation</td>
+        <td>Provision of health care (Art. 9(2)(h))</td>
+      </tr>
+      <tr>
+        <td>Sharing clinical reports and correspondence with your GP</td>
+        <td>Consent; legitimate interests</td>
+        <td>Provision of health care (Art. 9(2)(h))</td>
+      </tr>
+      <tr>
+        <td>Maintaining accurate and complete clinical records</td>
+        <td>Legal obligation; legitimate interests</td>
+        <td>Provision of health care (Art. 9(2)(h))</td>
+      </tr>
+      <tr>
+        <td>Processing payments and financial administration</td>
+        <td>Performance of a contract; legitimate interests</td>
+        <td>N/A (not special category data)</td>
+      </tr>
+      <tr>
+        <td>Responding to enquiries and managing appointments</td>
+        <td>Consent; legitimate interests</td>
+        <td>N/A (unless health data involved)</td>
+      </tr>
+      <tr>
+        <td>Complying with regulatory requirements (e.g. Healthcare Improvement Scotland)</td>
+        <td>Legal obligation</td>
+        <td>Provision of health care (Art. 9(2)(h))</td>
+      </tr>
+      <tr>
+        <td>Protecting vital interests in an emergency (e.g. safeguarding, risk to life)</td>
+        <td>Vital interests</td>
+        <td>Vital interests (Art. 9(2)(c))</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Where we rely on <strong>consent</strong> as a lawful basis, you have the right to withdraw consent at any time. Withdrawing consent does not affect the lawfulness of processing carried out before withdrawal.</p>
+  <p>Where we rely on <strong>legitimate interests</strong>, our legitimate interest is the provision of safe, effective and person-centred psychiatric care. We have assessed that this does not override your rights and freedoms.</p>
+
+  <h2>5. Who we share your information with</h2>
+  <p>We may share your personal data with the following parties, and only to the extent necessary:</p>
+
+  <h3>With your consent</h3>
+  <ul>
+    <li><strong>Your GP</strong> &mdash; clinical reports, diagnostic outcomes, medication recommendations and management plans are shared with your registered GP, with your consent. This is standard clinical practice and supports continuity of care.</li>
+    <li><strong>Other healthcare professionals</strong> &mdash; where relevant to your care and with your agreement, we may share information with other clinicians involved in your treatment.</li>
+    <li><strong>Family members or carers</strong> &mdash; only with your explicit consent.</li>
+  </ul>
+
+  <h3>Without your consent (where legally required or justified)</h3>
+  <ul>
+    <li><strong>Pharmacies</strong> &mdash; prescription information is sent to pharmacies to dispense your medication. This is a necessary part of treatment.</li>
+    <li><strong>Healthcare Improvement Scotland</strong> &mdash; as our regulatory body, HIS may require access to clinical records during inspections or investigations. This is a legal obligation.</li>
+    <li><strong>Courts or law enforcement</strong> &mdash; if required by law, court order or where necessary to protect vital interests.</li>
+    <li><strong>Safeguarding agencies</strong> &mdash; if there is a serious risk of harm to you or to others, we may be obliged to share information with relevant authorities. We will inform you of this where it is safe and appropriate to do so.</li>
+  </ul>
+
+  <h3>Service providers</h3>
+  <ul>
+    <li><strong>Semble</strong> &mdash; our clinical records management system, which stores your medical records securely. Semble acts as a data processor on our behalf and is contractually bound to protect your data.</li>
+    <li><strong>Secure video platform</strong> &mdash; consultations are conducted via secure, encrypted video. No recordings are made.</li>
+    <li><strong>Payment processors</strong> &mdash; payment transactions are handled by secure third-party payment providers. We do not store your card details.</li>
+  </ul>
+
+  <p>We do <strong>not</strong> sell, rent or otherwise commercially share your personal data with any third party. We do <strong>not</strong> use your data for marketing purposes.</p>
+
+  <h2>6. How we store and protect your information</h2>
+  <p>We take the security of your personal data seriously and implement appropriate technical and organisational measures to protect it.</p>
+  <ul>
+    <li>Clinical records are stored in <strong>Semble</strong>, a cloud-based clinical records system with encryption at rest and in transit, role-based access controls and regular security auditing.</li>
+    <li>Video consultations are conducted using secure, encrypted platforms. Consultations are <strong>not</strong> recorded.</li>
+    <li>Access to personal data is restricted to Dr David Crocker and authorised administrative staff, on a need-to-know basis.</li>
+    <li>Electronic devices used in clinical care are protected with full-disk encryption, strong passwords and up-to-date security software.</li>
+    <li>Physical records, where they exist, are stored securely with restricted access.</li>
+  </ul>
+
+  <h2>7. How long we keep your information</h2>
+  <p>We retain clinical records in accordance with NHS Scotland records management guidance and professional obligations.</p>
+  <ul>
+    <li><strong>Adult clinical records:</strong> retained for a minimum of <strong>10 years</strong> from the date of last contact, or longer if clinically or legally necessary.</li>
+    <li><strong>Records involving controlled drugs prescribing:</strong> retained in accordance with relevant regulatory requirements.</li>
+    <li><strong>Financial records:</strong> retained for a minimum of 6 years in accordance with HMRC requirements.</li>
+    <li><strong>Enquiry and correspondence records:</strong> retained for up to 2 years if you do not become a patient.</li>
+  </ul>
+  <p>At the end of the applicable retention period, records are securely deleted or destroyed in accordance with data protection law.</p>
+
+  <h2>8. Your rights</h2>
+  <p>Under UK data protection law, you have the following rights in relation to your personal data:</p>
+  <ul>
+    <li><strong>Right of access</strong> &mdash; you have the right to request a copy of the personal data we hold about you (a subject access request). We will respond within one month.</li>
+    <li><strong>Right to rectification</strong> &mdash; you have the right to ask us to correct any inaccurate or incomplete personal data.</li>
+    <li><strong>Right to erasure</strong> &mdash; you have the right to ask us to delete your personal data in certain circumstances. Please note that we may be required to retain clinical records for the minimum retention period outlined above, even if you request erasure.</li>
+    <li><strong>Right to restriction of processing</strong> &mdash; you have the right to ask us to restrict how we use your data in certain circumstances.</li>
+    <li><strong>Right to data portability</strong> &mdash; you have the right to request that we transfer your data to another provider in a structured, commonly used, machine-readable format, where technically feasible.</li>
+    <li><strong>Right to object</strong> &mdash; you have the right to object to our processing of your personal data where we rely on legitimate interests as the lawful basis.</li>
+    <li><strong>Rights related to automated decision-making</strong> &mdash; we do not use automated decision-making or profiling in our clinical practice.</li>
+  </ul>
+  <p>To exercise any of these rights, please contact us using the details provided at the top of this notice. We may need to verify your identity before processing your request.</p>
+
+  <h2>9. Children and young people</h2>
+  <p>Caledonian Psychiatry provides services to adults aged 18 and over only. We do not knowingly collect personal data from individuals under the age of 18. If we become aware that we have inadvertently collected data from a person under 18, we will take steps to delete it promptly.</p>
+
+  <h2>10. International data transfers</h2>
+  <p>Your personal data is primarily stored and processed within the United Kingdom. Where any of our service providers process data outside the UK, we ensure that appropriate safeguards are in place, such as adequacy decisions or standard contractual clauses approved by the Information Commissioner's Office.</p>
+
+  <h2>11. Changes to this privacy notice</h2>
+  <p>We may update this privacy notice from time to time to reflect changes in our practices, legal requirements or regulatory guidance. The date of the most recent update is shown at the top of this page. We encourage you to review this notice periodically.</p>
+  <p>Where changes are significant, we will make reasonable efforts to notify you directly (for example, by email if you are an existing patient).</p>
+
+  <h2>12. How to make a complaint</h2>
+  <p>If you are unhappy with how we have handled your personal data, we encourage you to contact us first so that we can try to resolve the matter:</p>
+  <div class="policy-contact-box">
+    <h3>Contact us</h3>
+    <p><strong>Email:</strong> <a href="mailto:admin@caledonianpsychiatry.co.uk">admin@caledonianpsychiatry.co.uk</a></p>
+    <p><strong>Telephone:</strong> <a href="tel:07592142000">07592 142000</a></p>
+    <p><strong>Post:</strong> Caledonian Psychiatry, The Lighthouse, Heugh Road, North Berwick, EH39 5PX</p>
+  </div>
+  <p>If you remain dissatisfied, you have the right to lodge a complaint with the Information Commissioner's Office (ICO):</p>
+  <div class="policy-contact-box">
+    <h3>Information Commissioner's Office</h3>
+    <p><strong>Website:</strong> <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">ico.org.uk/make-a-complaint</a></p>
+    <p><strong>Telephone:</strong> 0303 123 1113</p>
+    <p><strong>Post:</strong> Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF</p>
+  </div>
+
+  <h2>13. Regulatory oversight</h2>
+  <p>Caledonian Psychiatry is regulated by <strong>Healthcare Improvement Scotland</strong> (HIS) as an independent healthcare provider. HIS may require access to personal data, including clinical records, as part of its regulatory and inspection functions. This processing is carried out under legal obligation.</p>
+  <p>All clinical care is delivered in accordance with the Health and Social Care Standards and the Healthcare Improvement Scotland Quality Framework.</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-mark.png" alt="">
+          <span class="footer-brand-text">Caledonian Psychiatry</span>
+        </div>
+        <p style="max-width: 320px; font-size: 0.86rem; line-height: 1.7;">Private psychiatric assessment and ongoing care for adults across Scotland. Delivered remotely by Dr David Crocker, MRCPsych.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#services">ADHD assessment</a>
+        <a href="index.html#services">Autism assessment</a>
+        <a href="index.html#services">General adult psychiatry</a>
+        <a href="index.html#services">Ongoing management</a>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="index.html#about">About Dr Crocker</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#fees">Fees</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="complaints.html">Complaints policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Caledonian Psychiatry is the trading name of Edinburgh Psych Limited, registered in Scotland. ICO registration: ZB532461.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>

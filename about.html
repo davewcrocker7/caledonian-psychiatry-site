@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Dr David Crocker — Caledonian Psychiatry</title>
+<meta name="description" content="About Dr David Crocker, Specialist Psychiatrist and Medical Director of Caledonian Psychiatry. BSc (Hons), MBBS (Hons), MRCPsych. Private psychiatric care for adults across Scotland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #2a3d5e;
+    --navy-deep: #111c33;
+    --cream: #f8f6f1;
+    --cream-warm: #f3efe8;
+    --sage: #6e9484;
+    --sage-light: #96b8a8;
+    --sage-pale: #e4eeea;
+    --sage-dark: #4a7264;
+    --rust: #b8886f;
+    --text-dark: #2c2c2c;
+    --text-mid: #5a5a5a;
+    --text-light: #8a8a8a;
+    --white: #ffffff;
+    --border: #e2ddd5;
+    --shadow: rgba(26, 39, 68, 0.08);
+    --shadow-lg: rgba(26, 39, 68, 0.12);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* -- NAV -------------------------------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248, 246, 241, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    border-bottom-color: var(--border);
+    box-shadow: 0 2px 24px var(--shadow);
+  }
+  .nav-inner {
+    max-width: 1240px; margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+  .nav-logo-text {
+    font-family: 'DM Sans', 'Segoe UI', sans-serif;
+    font-size: 1rem; font-weight: 600;
+    color: #1a2744; letter-spacing: 0.22em; line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+    text-decoration: none; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1.5px; background: var(--sage);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--navy) !important; color: var(--cream) !important;
+    padding: 0.6rem 1.5rem !important; border-radius: 2px;
+    letter-spacing: 0.08em !important; transition: background 0.3s !important;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--navy-light) !important; }
+
+  .nav-hamburger {
+    display: none; cursor: pointer; flex-direction: column;
+    gap: 5px; padding: 4px; z-index: 110;
+  }
+  .nav-hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--navy); transition: 0.3s;
+  }
+  .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+  /* -- PAGE HERO -------------------------- */
+  .page-hero {
+    background: var(--cream);
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .page-hero .kicker {
+    font-size: 1.1rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--sage); margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: 3.2rem; font-weight: 400; color: var(--navy);
+    line-height: 1.2; margin-bottom: 1rem;
+  }
+  .page-hero .subtitle {
+    font-size: 1.1rem; color: var(--text-mid); line-height: 1.8;
+    max-width: 600px; margin: 0 auto 1.5rem;
+  }
+  .page-hero .quals {
+    font-size: 1.2rem; color: var(--sage-dark); font-style: italic;
+    font-family: var(--font-display); font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* -- ABOUT PHOTO GRID ------------------- */
+  .about-photo-section {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3.5rem; align-items: start;
+    margin: 2.5rem 0 3rem;
+  }
+  .about-photo {
+    border-radius: 3px; overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow);
+  }
+  .about-photo img {
+    width: 100%; display: block;
+    object-fit: cover;
+  }
+  .about-photo-tall img {
+    aspect-ratio: 3/4;
+  }
+  .about-photo-wide img {
+    aspect-ratio: 16/10;
+    object-position: center 25%;
+  }
+  .about-callout {
+    background: var(--sage-pale);
+    border-left: 4px solid var(--sage);
+    border-radius: 0 3px 3px 0;
+    padding: 1.8rem 2rem;
+    margin: 2rem 0;
+  }
+  .about-callout p {
+    color: var(--text-dark); font-size: 1.05rem;
+    line-height: 1.85;
+  }
+  @media (max-width: 768px) {
+    .about-photo-section {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* -- POLICY CONTENT --------------------- */
+  .policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+  .policy-content h2 {
+    font-family: var(--font-display);
+    font-size: 2.6rem; font-weight: 400; color: var(--navy);
+    margin: 3rem 0 1.2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    line-height: 1.25;
+  }
+  .policy-content h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .policy-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem; font-weight: 500; color: var(--navy);
+    margin: 2rem 0 0.7rem;
+  }
+  .policy-content p {
+    font-size: 1.05rem; color: var(--text-mid);
+    line-height: 1.85; margin-bottom: 1.1rem;
+  }
+  .policy-content ul, .policy-content ol {
+    margin: 0.5rem 0 1.2rem 1.5rem;
+    color: var(--text-mid);
+  }
+  .policy-content li {
+    font-size: 1rem; line-height: 1.8;
+    margin-bottom: 0.4rem;
+    padding-left: 0.3rem;
+  }
+  .policy-content a {
+    color: var(--sage-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s;
+  }
+  .policy-content a:hover {
+    color: var(--navy);
+  }
+  .policy-content strong {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  /* -- CONTACT BOX ------------------------ */
+  .policy-contact-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 1.8rem 2rem;
+    margin: 2rem 0;
+  }
+  .policy-contact-box h3 {
+    margin-top: 0;
+  }
+  .policy-contact-box p {
+    margin-bottom: 0.5rem;
+  }
+
+  /* -- FOOTER ----------------------------- */
+  footer {
+    background: var(--navy-deep); color: rgba(255,255,255,0.55);
+    padding: 4rem 2rem 2rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: start;
+    padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .footer-brand img {
+    height: 38px; filter: brightness(0) invert(1); opacity: 0.9;
+  }
+  .footer-brand-text {
+    font-family: var(--font-display); font-size: 1.1rem;
+    color: var(--white); font-weight: 500;
+  }
+  .footer-col h4 {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: rgba(255,255,255,0.35);
+    margin-bottom: 1rem;
+  }
+  .footer-col a {
+    display: block; font-size: 0.88rem; color: rgba(255,255,255,0.55);
+    text-decoration: none; margin-bottom: 0.55rem; transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 2rem; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.78rem; }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a {
+    font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    text-decoration: none;
+  }
+  .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+  /* -- SCROLLBAR -------------------------- */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--sage-light); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--sage); }
+
+  /* -- SELECTION -------------------------- */
+  ::selection { background: var(--sage-pale); color: var(--navy); }
+
+  /* -- RESPONSIVE ------------------------- */
+  @media (max-width: 968px) {
+    .nav-links {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--cream); flex-direction: column;
+      align-items: center; justify-content: center; gap: 1.8rem;
+    }
+    .nav-links.show { display: flex; z-index: 105; }
+    .nav-links a { font-size: 1.1rem; }
+    .nav-hamburger { display: flex; }
+    .footer-top { flex-direction: column; }
+  }
+  @media (max-width: 600px) {
+    .page-hero { padding: 8rem 1.5rem 3rem; }
+    .page-hero h1 { font-size: 2.2rem; }
+    .policy-content { padding: 3rem 1.5rem 4rem; }
+    .policy-content h2 { font-size: 1.5rem; }
+    .nav-inner { padding: 0.8rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-text">Caledonian Psychiatry</div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#how-it-works">Process</a>
+      <a href="index.html#fees">Fees</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">About</div>
+    <h1>Dr David Crocker</h1>
+    <p class="subtitle">Specialist Psychiatrist and Medical Director of Caledonian Psychiatry. Providing expert psychiatric care for adults across Scotland.</p>
+    <p class="quals">BSc (Hons), MBBS (Hons), DipExpMed, MRCPsych &nbsp;|&nbsp; GMC 7411382</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<div class="policy-content">
+
+  <div class="about-photo-section">
+    <div class="about-photo about-photo-tall">
+      <img src="assets/david-headshot.jpg" alt="Dr David Crocker">
+    </div>
+    <div>
+      <h2 style="margin-top: 0; padding-top: 0; border-top: none;">Background and training</h2>
+      <p>Although born in the United Kingdom, Dr Crocker spent a significant portion of his childhood in the United States before returning to the UK for his education. He obtained his Bachelor of Science degree from the University of St Andrews in 2008, before studying medicine at King's College London, where he graduated with honours (MBBS) in 2013.</p>
+      <p>After completing foundation training in Cornwall, he pursued further training in expedition medicine, gaining a Diploma in Expedition Medicine from the Royal College of Physicians and Surgeons of Glasgow in 2018. He then relocated to Edinburgh to commence core psychiatry training, achieving membership of the Royal College of Psychiatrists (MRCPsych) in 2022.</p>
+      <p>Dr Crocker has been working in adult psychiatry since 2018, with particular expertise in ADHD and autism spectrum disorder. Before establishing Caledonian Psychiatry, he worked as an Associate Specialist Psychiatrist at Edinburgh Adult Psychiatry, one of Scotland's leading independent psychiatric practices, where he conducted thousands of clinical assessments across neurodevelopmental conditions.</p>
+    </div>
+  </div>
+
+  <div class="about-callout">
+    <p><strong>A personal understanding.</strong> Having been diagnosed with ADHD himself, Dr Crocker has first-hand insight into the challenges of feeling unheard, misunderstood and overlooked. He knows what it is like to navigate a system that can feel dismissive of conditions it does not always recognise. This lived experience drives his commitment to ensuring every patient feels genuinely listened to, taken seriously and supported throughout their care.</p>
+  </div>
+
+  <h2>Expedition and wilderness medicine</h2>
+  <p>Dr Crocker holds a Diploma in Expedition Medicine from the Royal College of Physicians and Surgeons of Glasgow. His training in wilderness and remote-environment medicine reflects a broader interest in clinical care under challenging conditions, and has cultivated an adaptable, resourceful and calm approach that he brings to every psychiatric consultation.</p>
+
+  <h2>Clinical approach</h2>
+  <p>All clinical care at Caledonian Psychiatry is delivered personally by Dr Crocker. There is no delegation to other clinicians or trainees. This ensures continuity, consistency and a genuine therapeutic relationship with every patient.</p>
+  <p>Dr Crocker prides himself on being an attentive listener who adopts a personalised, non-judgemental approach. Consultations are unhurried and structured, with careful attention to each individual's history, experiences and goals. Clear, detailed reports are shared with patients and, with consent, their GP and other professionals involved in their care.</p>
+  <p>The practice is founded on person-centred care, aligned with the Health and Social Care Standards. Every patient is treated as an individual, with dignity, respect and transparency at the centre of every interaction.</p>
+
+  <h2>Outside the clinic</h2>
+  <p>Dr Crocker lives in Edinburgh with his partner and their labradoodle, Winston. When not working, he enjoys mountaineering, racquet sports, PC gaming and exploring the Scottish outdoors.</p>
+  <div class="about-photo" style="margin: 2rem 0;">
+    <img src="assets/david-personal.jpg" alt="Dr David Crocker with Winston" style="aspect-ratio: 16/9; object-position: center 30%;">
+  </div>
+
+  <h2>About the practice</h2>
+  <p>Caledonian Psychiatry is the trading name of <strong>Edinburgh Psych Limited</strong>, a company registered in Scotland. The practice is based at The Lighthouse, Heugh Road, North Berwick, East Lothian, EH39 5PX.</p>
+  <p>All consultations are delivered remotely via secure, encrypted video. This allows patients across Scotland and beyond to access specialist psychiatric care without the need to travel, whilst maintaining the same standard of clinical rigour as an in-person appointment.</p>
+  <p>The practice has applied for registration with <strong>Healthcare Improvement Scotland</strong> as an independent healthcare service. All care is delivered in accordance with the Healthcare Improvement Scotland Quality Framework and the Health and Social Care Standards.</p>
+
+  <h2>Professional registration</h2>
+  <ul>
+    <li><strong>General Medical Council (GMC):</strong> registered with licence to practise &mdash; GMC number <a href="https://www.gmc-uk.org/doctors/7411382" target="_blank" rel="noopener">7411382</a></li>
+    <li><strong>Royal College of Psychiatrists:</strong> Member (MRCPsych)</li>
+    <li><strong>Information Commissioner's Office (ICO):</strong> registered data controller &mdash; registration number ZB532461</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <div class="policy-contact-box">
+    <h3>Get in touch</h3>
+    <p><strong>Email:</strong> <a href="mailto:admin@caledonianpsychiatry.co.uk">admin@caledonianpsychiatry.co.uk</a></p>
+    <p><strong>Telephone:</strong> <a href="tel:07592142000">07592 142000</a></p>
+    <p><strong>Address:</strong> Caledonian Psychiatry, The Lighthouse, Heugh Road, North Berwick, EH39 5PX</p>
+    <p><strong>Hours:</strong> Monday to Friday, 08:30 &ndash; 17:30</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-mark.png" alt="">
+          <span class="footer-brand-text">Caledonian Psychiatry</span>
+        </div>
+        <p style="max-width: 320px; font-size: 0.86rem; line-height: 1.7;">Private psychiatric assessment and ongoing care for adults across Scotland. Delivered remotely by Dr David Crocker, MRCPsych.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#services">ADHD assessment</a>
+        <a href="index.html#services">Autism assessment</a>
+        <a href="index.html#services">General adult psychiatry</a>
+        <a href="index.html#services">Ongoing management</a>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="index.html#about">About Dr Crocker</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#fees">Fees</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy notice</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="complaints.html">Complaints policy</a>
+        <a href="duty-of-candour.html">Duty of candour</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Caledonian Psychiatry is the trading name of Edinburgh Psych Limited, registered in Scotland. ICO registration: ZB532461.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="complaints.html">Complaints</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaints Policy — Caledonian Psychiatry</title>
+<meta name="description" content="Complaints policy for Caledonian Psychiatry (Edinburgh Psych Limited). How to raise a concern or make a complaint about our service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #2a3d5e;
+    --navy-deep: #111c33;
+    --cream: #f8f6f1;
+    --cream-warm: #f3efe8;
+    --sage: #6e9484;
+    --sage-light: #96b8a8;
+    --sage-pale: #e4eeea;
+    --sage-dark: #4a7264;
+    --rust: #b8886f;
+    --text-dark: #2c2c2c;
+    --text-mid: #5a5a5a;
+    --text-light: #8a8a8a;
+    --white: #ffffff;
+    --border: #e2ddd5;
+    --shadow: rgba(26, 39, 68, 0.08);
+    --shadow-lg: rgba(26, 39, 68, 0.12);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* ── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248, 246, 241, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 24px var(--shadow);
+  }
+  .nav-inner {
+    max-width: 1240px; margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 80px; width: 80px; object-fit: contain;
+  }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 1.7rem; font-weight: 500;
+    color: var(--navy); letter-spacing: 0.02em; line-height: 1.2;
+  }
+  .nav-logo-text span {
+    display: block; font-size: 0.75rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--text-mid);
+    font-family: var(--font-body); font-weight: 400;
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+    text-decoration: none; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1.5px; background: var(--sage);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--navy) !important; color: var(--cream) !important;
+    padding: 0.6rem 1.5rem !important; border-radius: 2px;
+    letter-spacing: 0.08em !important; transition: background 0.3s !important;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--navy-light) !important; }
+
+  .nav-hamburger {
+    display: none; cursor: pointer; flex-direction: column;
+    gap: 5px; padding: 4px; z-index: 110;
+  }
+  .nav-hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--navy); transition: 0.3s;
+  }
+  .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+  /* ── PAGE HERO ────────────────────── */
+  .page-hero {
+    background: var(--navy);
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .page-kicker {
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--sage-light);
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: 3rem; font-weight: 400; color: var(--white);
+    line-height: 1.22; margin-bottom: 1rem;
+  }
+  .page-hero .updated {
+    font-size: 0.88rem; color: rgba(255,255,255,0.5);
+  }
+
+  /* ── CONTENT ──────────────────────── */
+  .policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+  .policy-content h2 {
+    font-family: var(--font-display);
+    font-size: 2rem; font-weight: 400; color: var(--navy);
+    line-height: 1.3; margin: 3rem 0 1rem;
+    padding-top: 1rem;
+  }
+  .policy-content h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .policy-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 500; color: var(--navy);
+    line-height: 1.35; margin: 2rem 0 0.75rem;
+  }
+  .policy-content p {
+    font-size: 1rem; color: var(--text-mid);
+    line-height: 1.85; margin-bottom: 1rem;
+  }
+  .policy-content ul, .policy-content ol {
+    margin: 0.5rem 0 1.2rem 1.5rem;
+    color: var(--text-mid);
+  }
+  .policy-content li {
+    font-size: 1rem; line-height: 1.85;
+    margin-bottom: 0.4rem;
+  }
+  .policy-content a {
+    color: var(--sage-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s;
+  }
+  .policy-content a:hover {
+    color: var(--navy);
+  }
+  .policy-content strong {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .policy-ref {
+    display: inline-block;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    background: var(--cream-warm);
+    padding: 0.2rem 0.7rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+  }
+  .contact-box {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sage);
+    border-radius: 0 3px 3px 0;
+  }
+  .contact-box p {
+    margin-bottom: 0.4rem;
+  }
+  .contact-box p:last-child {
+    margin-bottom: 0;
+  }
+  .stage-block {
+    margin: 1.5rem 0 2rem;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+  .stage-block h3 {
+    margin-top: 0;
+    color: var(--sage-dark);
+  }
+  .stage-block p {
+    margin-bottom: 0.6rem;
+  }
+  .stage-block p:last-child {
+    margin-bottom: 0;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* ── FOOTER ─────────────────────────── */
+  footer {
+    background: var(--navy-deep); color: rgba(255,255,255,0.55);
+    padding: 4rem 2rem 2rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: start;
+    padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .footer-brand img {
+    height: 38px; filter: brightness(0) invert(1); opacity: 0.9;
+  }
+  .footer-brand-text {
+    font-family: var(--font-display); font-size: 1.1rem;
+    color: var(--white); font-weight: 500;
+  }
+  .footer-col h4 {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: rgba(255,255,255,0.35);
+    margin-bottom: 1rem;
+  }
+  .footer-col a {
+    display: block; font-size: 0.88rem; color: rgba(255,255,255,0.55);
+    text-decoration: none; margin-bottom: 0.55rem; transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 2rem; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.78rem; }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a {
+    font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    text-decoration: none;
+  }
+  .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ── SCROLLBAR ──────────────────────── */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--sage-light); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--sage); }
+
+  /* ── SELECTION ──────────────────────── */
+  ::selection { background: var(--sage-pale); color: var(--navy); }
+
+  /* ── RESPONSIVE ─────────────────────── */
+  @media (max-width: 968px) {
+    .nav-links {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--cream); flex-direction: column;
+      align-items: center; justify-content: center; gap: 1.8rem;
+    }
+    .nav-links.show { display: flex; z-index: 105; }
+    .nav-links a { font-size: 1.1rem; }
+    .nav-hamburger { display: flex; }
+    .footer-top { flex-direction: column; }
+  }
+  @media (max-width: 600px) {
+    .page-hero { padding: 8rem 1.5rem 3rem; }
+    .page-hero h1 { font-size: 2rem; }
+    .policy-content { padding: 3rem 1.5rem 4rem; }
+    .policy-content h2 { font-size: 1.6rem; }
+    .stage-block { padding: 1.2rem 1.5rem; }
+    .contact-box { padding: 1.2rem 1.5rem; }
+    .nav-inner { padding: 0.8rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry" style="height:80px;width:80px;object-fit:contain;">
+      <div class="nav-logo-text">Caledonian<br>Psychiatry <span>Private psychiatric care</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#how-it-works">Process</a>
+      <a href="index.html#fees">Fees</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-kicker">Legal</div>
+    <h1>Complaints Policy</h1>
+    <p class="updated">Last updated: February 2026</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="policy-content">
+
+  <div class="policy-ref">POL-00483 &mdash; Patient Feedback and Complaints Policy</div>
+
+  <h2>Our commitment</h2>
+
+  <p>Caledonian Psychiatry is the trading name of Edinburgh Psych Limited. We are committed to providing a high standard of care and service to all patients. We take all complaints and concerns seriously and use them as an opportunity to learn and improve.</p>
+
+  <p>This policy sets out how you can raise a concern or make a complaint about any aspect of the service you have received. It has been developed in accordance with the requirements of <strong>Healthcare Improvement Scotland (HIS)</strong> and the <strong>Health and Social Care Standards</strong>.</p>
+
+  <p>The Registered Manager responsible for handling complaints is <strong>Dr David Crocker</strong>.</p>
+
+  <h2>Who can make a complaint</h2>
+
+  <p>A complaint can be made by:</p>
+  <ul>
+    <li>A patient who is receiving or has received care from Caledonian Psychiatry</li>
+    <li>A representative acting on behalf of a patient, with their consent</li>
+    <li>A relative, carer or other person who has been affected by the service</li>
+  </ul>
+
+  <p>Where a complaint is made on behalf of someone else, we may need to confirm that the person has given their consent before we can share information about their care.</p>
+
+  <h2>How to raise a concern or complaint</h2>
+
+  <p>You may raise a concern or complaint verbally (by telephone) or in writing (by email or post). There is no requirement to put your complaint in writing at the initial stage.</p>
+
+  <div class="contact-box">
+    <p><strong>Dr David Crocker, Registered Manager</strong></p>
+    <p>Email: <a href="mailto:admin@caledonianpsychiatry.co.uk">admin@caledonianpsychiatry.co.uk</a></p>
+    <p>Telephone: <a href="tel:07592142000">07592 142000</a></p>
+    <p>Post: Caledonian Psychiatry, The Lighthouse, Heugh Road, North Berwick, EH39 5PX</p>
+  </div>
+
+  <p>We encourage you to raise any concerns as soon as possible. Whilst there is no strict time limit, it is generally easier to investigate matters if they are raised within 12 months of the event in question.</p>
+
+  <h2>Our complaints process</h2>
+
+  <p>We follow a three-stage process to ensure that all concerns are dealt with fairly, thoroughly and promptly.</p>
+
+  <div class="stage-block">
+    <h3>Stage 1: Informal resolution</h3>
+    <p>Many concerns can be resolved quickly through direct discussion. If you are unhappy with any aspect of your care, we encourage you to raise this directly with Dr Crocker at the earliest opportunity. We will do our best to resolve the matter informally and to your satisfaction.</p>
+    <p>This may involve a telephone conversation, a discussion at your next appointment, or a brief written response by email.</p>
+  </div>
+
+  <div class="stage-block">
+    <h3>Stage 2: Formal written complaint</h3>
+    <p>If you are not satisfied with the outcome of Stage 1, or if you prefer to make a formal complaint from the outset, you may do so in writing by email or by post using the contact details above.</p>
+    <p>When making a formal complaint, it is helpful to include:</p>
+    <ul>
+      <li>Your full name and contact details</li>
+      <li>A description of your concern and what happened</li>
+      <li>When the event occurred</li>
+      <li>The outcome you are seeking</li>
+    </ul>
+    <p>We will:</p>
+    <ul>
+      <li><strong>Acknowledge</strong> your complaint within <strong>3 working days</strong> of receipt</li>
+      <li><strong>Investigate</strong> the matter thoroughly and impartially</li>
+      <li>Provide a full <strong>written response</strong> within <strong>20 working days</strong> of receipt</li>
+    </ul>
+    <p>If we are unable to complete our investigation within 20 working days, we will write to you to explain the reason for the delay and provide a revised timescale.</p>
+    <p>Our response will include a summary of the complaint, our findings, any actions we have taken or intend to take, and information about how to escalate the matter further if you remain dissatisfied.</p>
+  </div>
+
+  <div class="stage-block">
+    <h3>Stage 3: External escalation</h3>
+    <p>If you are not satisfied with the outcome of our internal complaints process, you have the right to escalate your complaint to an external body. The appropriate organisation will depend on the nature of your concern.</p>
+  </div>
+
+  <h2>External organisations</h2>
+
+  <h3>Healthcare Improvement Scotland (HIS)</h3>
+  <p>HIS is the independent regulator of independent healthcare services in Scotland. You may contact HIS if you have concerns about the safety or quality of care provided by Caledonian Psychiatry.</p>
+  <div class="contact-box">
+    <p><strong>Healthcare Improvement Scotland</strong></p>
+    <p>Telephone: 0131 623 4300</p>
+    <p>Email: <a href="mailto:his.inspectionenquiries@nhs.scot">his.inspectionenquiries@nhs.scot</a></p>
+    <p>Website: <a href="https://www.healthcareimprovementscotland.org" target="_blank" rel="noopener">www.healthcareimprovementscotland.org</a></p>
+  </div>
+
+  <h3>General Medical Council (GMC)</h3>
+  <p>If your concern relates to the professional conduct, performance or fitness to practise of Dr David Crocker, you may raise this with the GMC.</p>
+  <div class="contact-box">
+    <p><strong>General Medical Council</strong></p>
+    <p>Telephone: 0161 923 6602</p>
+    <p>Website: <a href="https://www.gmc-uk.org/concerns" target="_blank" rel="noopener">www.gmc-uk.org/concerns</a></p>
+  </div>
+
+  <h3>Information Commissioner's Office (ICO)</h3>
+  <p>If your complaint relates to the handling of your personal data, you have the right to complain to the ICO.</p>
+  <div class="contact-box">
+    <p><strong>Information Commissioner's Office</strong></p>
+    <p>Telephone: 0303 123 1113</p>
+    <p>Website: <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">ico.org.uk/make-a-complaint</a></p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>How we handle complaints</h2>
+
+  <p>All complaints, whether informal or formal, are treated with confidentiality and respect. We will not discriminate against any patient who raises a complaint, and making a complaint will not affect the care you receive.</p>
+
+  <p>Our approach to complaints handling includes the following principles:</p>
+  <ul>
+    <li><strong>Fairness:</strong> All complaints are investigated impartially and without prejudice.</li>
+    <li><strong>Thoroughness:</strong> We examine all relevant information and, where appropriate, seek independent advice.</li>
+    <li><strong>Transparency:</strong> We provide clear and honest responses, including acknowledgement of any failings identified.</li>
+    <li><strong>Timeliness:</strong> We respond within the stated timeframes and keep you informed of progress.</li>
+    <li><strong>Learning:</strong> We use complaints as an opportunity to improve our service.</li>
+  </ul>
+
+  <h2>Record keeping and learning</h2>
+
+  <p>All complaints are logged in a confidential complaints register, recording the nature of the complaint, the investigation undertaken, the outcome and any actions taken. This register is reviewed regularly to identify trends, themes and areas for improvement.</p>
+
+  <p>Where a complaint identifies a need for change, we will implement appropriate improvements to our policies, procedures or clinical practice. Significant findings are incorporated into our ongoing quality improvement processes in line with HIS requirements.</p>
+
+  <h2>Support and advocacy</h2>
+
+  <p>If you need support in making a complaint, you may find it helpful to contact an independent advocacy service. In Scotland, you can find local advocacy services through the <a href="https://www.siaa.org.uk" target="_blank" rel="noopener">Scottish Independent Advocacy Alliance (SIAA)</a>.</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-mark.png" alt="">
+          <span class="footer-brand-text">Caledonian Psychiatry</span>
+        </div>
+        <p style="max-width: 320px; font-size: 0.86rem; line-height: 1.7;">Private psychiatric assessment and ongoing care for adults across Scotland. Delivered remotely by Dr David Crocker, MRCPsych.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#services">ADHD assessment</a>
+        <a href="index.html#services">Autism assessment</a>
+        <a href="index.html#services">General adult psychiatry</a>
+        <a href="index.html#services">Ongoing management</a>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="index.html#about">About Dr Crocker</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#fees">Fees</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="complaints.html">Complaints policy</a>
+        <a href="duty-of-candour.html">Duty of candour</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Caledonian Psychiatry is the trading name of Edinburgh Psych Limited, registered in Scotland. ICO registration: ZB532461.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="complaints.html">Complaints</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>

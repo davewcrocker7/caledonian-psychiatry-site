@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duty of Candour — Caledonian Psychiatry</title>
+<meta name="description" content="Duty of candour statement for Caledonian Psychiatry (Edinburgh Psych Limited). Our obligations under the Health (Tobacco, Nicotine etc. and Care) (Scotland) Act 2016.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-light: #2a3d5e;
+    --navy-deep: #111c33;
+    --cream: #f8f6f1;
+    --cream-warm: #f3efe8;
+    --sage: #6e9484;
+    --sage-light: #96b8a8;
+    --sage-pale: #e4eeea;
+    --sage-dark: #4a7264;
+    --rust: #b8886f;
+    --text-dark: #2c2c2c;
+    --text-mid: #5a5a5a;
+    --text-light: #8a8a8a;
+    --white: #ffffff;
+    --border: #e2ddd5;
+    --shadow: rgba(26, 39, 68, 0.08);
+    --shadow-lg: rgba(26, 39, 68, 0.12);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 18px; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* ── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(248, 246, 241, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 24px var(--shadow);
+  }
+  .nav-inner {
+    max-width: 1240px; margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 80px; width: 80px; object-fit: contain;
+  }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 1.7rem; font-weight: 500;
+    color: var(--navy); letter-spacing: 0.02em; line-height: 1.2;
+  }
+  .nav-logo-text span {
+    display: block; font-size: 0.75rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--text-mid);
+    font-family: var(--font-body); font-weight: 400;
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex; gap: 2rem; align-items: center;
+  }
+  .nav-links a {
+    font-size: 0.9rem; font-weight: 500; color: var(--text-mid);
+    text-decoration: none; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 1.5px; background: var(--sage);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: var(--navy) !important; color: var(--cream) !important;
+    padding: 0.6rem 1.5rem !important; border-radius: 2px;
+    letter-spacing: 0.08em !important; transition: background 0.3s !important;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--navy-light) !important; }
+
+  .nav-hamburger {
+    display: none; cursor: pointer; flex-direction: column;
+    gap: 5px; padding: 4px; z-index: 110;
+  }
+  .nav-hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--navy); transition: 0.3s;
+  }
+  .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+  /* ── PAGE HERO ────────────────────── */
+  .page-hero {
+    background: var(--navy);
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+  }
+  .page-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .page-kicker {
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--sage-light);
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: 3rem; font-weight: 400; color: var(--white);
+    line-height: 1.22; margin-bottom: 1rem;
+  }
+  .page-hero .updated {
+    font-size: 0.88rem; color: rgba(255,255,255,0.5);
+  }
+
+  /* ── CONTENT ──────────────────────── */
+  .policy-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+  }
+  .policy-content h2 {
+    font-family: var(--font-display);
+    font-size: 2rem; font-weight: 400; color: var(--navy);
+    line-height: 1.3; margin: 3rem 0 1rem;
+    padding-top: 1rem;
+  }
+  .policy-content h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .policy-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 500; color: var(--navy);
+    line-height: 1.35; margin: 2rem 0 0.75rem;
+  }
+  .policy-content p {
+    font-size: 1rem; color: var(--text-mid);
+    line-height: 1.85; margin-bottom: 1rem;
+  }
+  .policy-content ul, .policy-content ol {
+    margin: 0.5rem 0 1.2rem 1.5rem;
+    color: var(--text-mid);
+  }
+  .policy-content li {
+    font-size: 1rem; line-height: 1.85;
+    margin-bottom: 0.4rem;
+  }
+  .policy-content a {
+    color: var(--sage-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.3s;
+  }
+  .policy-content a:hover {
+    color: var(--navy);
+  }
+  .policy-content strong {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .highlight-box {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sage);
+    border-radius: 0 3px 3px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 0.4rem;
+  }
+  .highlight-box p:last-child {
+    margin-bottom: 0;
+  }
+  .contact-box {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sage);
+    border-radius: 0 3px 3px 0;
+  }
+  .contact-box p {
+    margin-bottom: 0.4rem;
+  }
+  .contact-box p:last-child {
+    margin-bottom: 0;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* ── FOOTER ─────────────────────────── */
+  footer {
+    background: var(--navy-deep); color: rgba(255,255,255,0.55);
+    padding: 4rem 2rem 2rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: flex; justify-content: space-between; align-items: start;
+    padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08);
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .footer-brand img {
+    height: 38px; filter: brightness(0) invert(1); opacity: 0.9;
+  }
+  .footer-brand-text {
+    font-family: var(--font-display); font-size: 1.1rem;
+    color: var(--white); font-weight: 500;
+  }
+  .footer-col h4 {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: rgba(255,255,255,0.35);
+    margin-bottom: 1rem;
+  }
+  .footer-col a {
+    display: block; font-size: 0.88rem; color: rgba(255,255,255,0.55);
+    text-decoration: none; margin-bottom: 0.55rem; transition: color 0.3s;
+  }
+  .footer-col a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 2rem; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p { font-size: 0.78rem; }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a {
+    font-size: 0.78rem; color: rgba(255,255,255,0.35);
+    text-decoration: none;
+  }
+  .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ── SCROLLBAR ──────────────────────── */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: var(--sage-light); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--sage); }
+
+  /* ── SELECTION ──────────────────────── */
+  ::selection { background: var(--sage-pale); color: var(--navy); }
+
+  /* ── RESPONSIVE ─────────────────────── */
+  @media (max-width: 968px) {
+    .nav-links {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--cream); flex-direction: column;
+      align-items: center; justify-content: center; gap: 1.8rem;
+    }
+    .nav-links.show { display: flex; z-index: 105; }
+    .nav-links a { font-size: 1.1rem; }
+    .nav-hamburger { display: flex; }
+    .footer-top { flex-direction: column; }
+  }
+  @media (max-width: 600px) {
+    .page-hero { padding: 8rem 1.5rem 3rem; }
+    .page-hero h1 { font-size: 2rem; }
+    .policy-content { padding: 3rem 1.5rem 4rem; }
+    .policy-content h2 { font-size: 1.6rem; }
+    .highlight-box { padding: 1.2rem 1.5rem; }
+    .contact-box { padding: 1.2rem 1.5rem; }
+    .nav-inner { padding: 0.8rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry" style="height:80px;width:80px;object-fit:contain;">
+      <div class="nav-logo-text">Caledonian<br>Psychiatry <span>Private psychiatric care</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#how-it-works">Process</a>
+      <a href="index.html#fees">Fees</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-kicker">Governance</div>
+    <h1>Duty of Candour</h1>
+    <p class="updated">Last updated: February 2026</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="policy-content">
+
+  <h2>What is the duty of candour</h2>
+
+  <p>The duty of candour is a legal requirement for all health and social care organisations in Scotland. It was introduced by the <strong>Health (Tobacco, Nicotine etc. and Care) (Scotland) Act 2016</strong> and is set out in the <strong>Duty of Candour Procedure (Scotland) Regulations 2018</strong>.</p>
+
+  <p>The duty of candour requires Caledonian Psychiatry (the trading name of Edinburgh Psych Limited) to follow a specific procedure whenever an unintended or unexpected incident occurs during the provision of care that results in death or harm to a patient, as defined in the legislation.</p>
+
+  <p>The purpose of the duty of candour is to ensure openness, honesty and transparency when things go wrong. It recognises that patients and their families have a right to be told about incidents that have affected them, and to receive a sincere apology.</p>
+
+  <h2>When the duty of candour applies</h2>
+
+  <p>The duty of candour is activated when an unintended or unexpected incident occurs during the provision of care and the incident results in any of the following outcomes:</p>
+
+  <ul>
+    <li>The death of the person</li>
+    <li>A permanent lessening of bodily, sensory, motor, physiological or intellectual functions</li>
+    <li>An increase in the person's treatment</li>
+    <li>Changes to the structure of the person's body</li>
+    <li>The shortening of life expectancy</li>
+    <li>Pain or psychological harm experienced for a continuous period of at least 28 days</li>
+    <li>The person requiring treatment to prevent their death or any injury which, if left untreated, would lead to one of the outcomes above</li>
+  </ul>
+
+  <p>The duty applies only to incidents that were not intended and were not expected as part of the care or treatment being provided.</p>
+
+  <h2>What we will do</h2>
+
+  <p>When a qualifying incident is identified, Caledonian Psychiatry will follow the procedure set out in the Regulations. This involves three key steps:</p>
+
+  <h3>1. Notify the relevant person</h3>
+  <p>We will contact the patient (or their family, carer or representative where appropriate) as soon as reasonably practicable after the incident has been identified. This initial contact will be made in person or by telephone wherever possible, and will be followed up in writing.</p>
+
+  <h3>2. Provide an apology</h3>
+  <p>We will offer a sincere apology to the patient or relevant person. This apology is an expression of genuine regret and sorrow for the incident and its consequences. In accordance with the legislation, an apology does not constitute an admission of negligence or a breach of any statutory duty.</p>
+
+  <h3>3. Review and investigate</h3>
+  <p>We will carry out a thorough review of the incident to understand what happened, why it happened, and what steps can be taken to prevent a recurrence. The findings of the review and any actions taken will be shared with the patient or relevant person in writing.</p>
+
+  <div class="highlight-box">
+    <p><strong>Our commitment:</strong> We will be open and transparent about what has happened, provide a clear account of the facts as we understand them, and explain what we are doing to learn from the incident and improve our service.</p>
+  </div>
+
+  <h2>Our responsibilities</h2>
+
+  <p>As a healthcare provider, Caledonian Psychiatry is committed to the following principles in relation to the duty of candour:</p>
+
+  <ul>
+    <li><strong>Openness:</strong> We will be open with patients and their families about incidents that have caused harm, and provide them with the information they need to understand what happened.</li>
+    <li><strong>Honesty:</strong> We will give an honest account of the incident, including what went wrong and why, based on the information available at the time.</li>
+    <li><strong>Support:</strong> We will offer appropriate support to patients and their families following an incident, including signposting to external organisations where helpful.</li>
+    <li><strong>Learning:</strong> We will use the findings of incident reviews to make meaningful improvements to our clinical practice, policies and procedures.</li>
+    <li><strong>Accountability:</strong> The Registered Manager, Dr David Crocker, has overall responsibility for ensuring compliance with the duty of candour within Caledonian Psychiatry.</li>
+  </ul>
+
+  <h2>Annual reporting</h2>
+
+  <p>In accordance with the Duty of Candour Procedure (Scotland) Regulations 2018, Caledonian Psychiatry is required to prepare and publish an annual report on duty of candour. This report covers each financial year and includes:</p>
+
+  <ul>
+    <li>The number of incidents to which the duty of candour procedure was applied</li>
+    <li>The nature of the incidents</li>
+    <li>What action was taken in relation to each incident</li>
+    <li>Any changes or improvements made as a result</li>
+    <li>Information about the organisation's policies and procedures relating to the duty of candour</li>
+  </ul>
+
+  <p>The annual report is made available on request and, where applicable, is submitted to Healthcare Improvement Scotland as part of our regulatory obligations.</p>
+
+  <hr class="divider">
+
+  <h2>How to report a concern</h2>
+
+  <p>If you believe that an unintended or unexpected incident has occurred during your care with Caledonian Psychiatry that has resulted in harm, we encourage you to bring this to our attention as soon as possible.</p>
+
+  <div class="contact-box">
+    <p><strong>Dr David Crocker, Registered Manager</strong></p>
+    <p>Email: <a href="mailto:admin@caledonianpsychiatry.co.uk">admin@caledonianpsychiatry.co.uk</a></p>
+    <p>Telephone: <a href="tel:07592142000">07592 142000</a></p>
+    <p>Post: Caledonian Psychiatry, The Lighthouse, Heugh Road, North Berwick, EH39 5PX</p>
+  </div>
+
+  <p>You may also raise concerns with our regulatory body:</p>
+
+  <div class="contact-box">
+    <p><strong>Healthcare Improvement Scotland</strong></p>
+    <p>Telephone: 0131 623 4300</p>
+    <p>Email: <a href="mailto:his.inspectionenquiries@nhs.scot">his.inspectionenquiries@nhs.scot</a></p>
+    <p>Website: <a href="https://www.healthcareimprovementscotland.org" target="_blank" rel="noopener">www.healthcareimprovementscotland.org</a></p>
+  </div>
+
+  <h2>Further information</h2>
+
+  <p>For more information about the duty of candour in Scotland, you may wish to refer to the following resources:</p>
+
+  <ul>
+    <li><a href="https://www.legislation.gov.uk/asp/2016/14/part/2/crossheading/duty-of-candour" target="_blank" rel="noopener">Health (Tobacco, Nicotine etc. and Care) (Scotland) Act 2016 &mdash; Part 2: Duty of Candour</a></li>
+    <li><a href="https://www.legislation.gov.uk/ssi/2018/57/contents/made" target="_blank" rel="noopener">Duty of Candour Procedure (Scotland) Regulations 2018</a></li>
+    <li><a href="https://www.healthcareimprovementscotland.org" target="_blank" rel="noopener">Healthcare Improvement Scotland</a></li>
+  </ul>
+
+  <p>If you have any questions about this policy or our approach to the duty of candour, please do not hesitate to <a href="index.html#contact">contact us</a>.</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo-mark.png" alt="">
+          <span class="footer-brand-text">Caledonian Psychiatry</span>
+        </div>
+        <p style="max-width: 320px; font-size: 0.86rem; line-height: 1.7;">Private psychiatric assessment and ongoing care for adults across Scotland. Delivered remotely by Dr David Crocker, MRCPsych.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="index.html#services">ADHD assessment</a>
+        <a href="index.html#services">Autism assessment</a>
+        <a href="index.html#services">General adult psychiatry</a>
+        <a href="index.html#services">Ongoing management</a>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="index.html#about">About Dr Crocker</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#fees">Fees</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+        <a href="complaints.html">Complaints policy</a>
+        <a href="duty-of-candour.html">Duty of candour</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Caledonian Psychiatry is the trading name of Edinburgh Psych Limited, registered in Scotland. ICO registration: ZB532461.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="complaints.html">Complaints</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('show');
+    });
+  });
+</script>
+</body>
+</html>
