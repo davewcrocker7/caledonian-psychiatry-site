@@ -317,9 +317,51 @@
     .policy-content h2 { font-size: 1.5rem; }
     .nav-inner { padding: 0.8rem 1.5rem; }
   }
+
+  /* ── PASSWORD GATE ──────────────────── */
+  .gate-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(248, 246, 241, 0.85);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.5s ease;
+  }
+  .gate-overlay.hidden { opacity: 0; pointer-events: none; }
+  .gate-box {
+    background: var(--white); border: 1px solid var(--border); border-radius: 3px;
+    padding: 3rem 2.5rem; text-align: center;
+    box-shadow: 0 12px 48px var(--shadow-lg); max-width: 400px; width: 90%;
+  }
+  .gate-box h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; }
+  .gate-box p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 1.5rem; line-height: 1.6; }
+  .gate-input {
+    width: 100%; padding: 0.8rem 1rem; font-family: var(--font-body); font-size: 1rem;
+    border: 1.5px solid var(--border); border-radius: 2px; outline: none;
+    text-align: center; letter-spacing: 0.15em; transition: border-color 0.3s;
+  }
+  .gate-input:focus { border-color: var(--sage); }
+  .gate-input.error { border-color: var(--rust); animation: shake 0.4s ease; }
+  @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+  .gate-btn {
+    width: 100%; margin-top: 1rem; background: var(--navy); color: var(--cream);
+    padding: 0.8rem; border: none; font-size: 0.9rem; font-family: var(--font-body);
+    font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; border-radius: 2px; transition: background 0.3s;
+  }
+  .gate-btn:hover { background: var(--navy-light); }
 </style>
 </head>
 <body>
+
+<!-- PASSWORD GATE -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-box">
+    <h2>Preview access</h2>
+    <p>This site is currently under development. Please enter the access code to continue.</p>
+    <input type="password" class="gate-input" id="gateInput" placeholder="Access code" autocomplete="off">
+    <button class="gate-btn" id="gateBtn">Enter</button>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -450,6 +492,34 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // Password gate
+  (function() {
+    const overlay = document.getElementById('gateOverlay');
+    const input = document.getElementById('gateInput');
+    const btn = document.getElementById('gateBtn');
+    if (localStorage.getItem('cp_access') === 'granted') {
+      overlay.remove();
+      return;
+    }
+    function tryAccess() {
+      if (input.value === 'HIS2026') {
+        localStorage.setItem('cp_access', 'granted');
+        overlay.classList.add('hidden');
+        setTimeout(() => overlay.remove(), 500);
+      } else {
+        input.classList.add('error');
+        setTimeout(() => input.classList.remove('error'), 400);
+        input.value = '';
+        input.focus();
+      }
+    }
+    btn.addEventListener('click', tryAccess);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') tryAccess(); });
+    input.focus();
+  })();
+</script>
 
 <script>
   // Navbar scroll
