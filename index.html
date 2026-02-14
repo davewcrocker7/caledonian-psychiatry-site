@@ -609,6 +609,11 @@
     .footer-top { flex-direction: column; }
   }
   @media (max-width: 600px) {
+    html { font-size: 16px; }
+    body { text-align: left; }
+    .hero { min-height: auto; }
+    .hero-content { padding: 6rem 1.5rem 3rem; }
+    .hero-logo { width: 70vw; max-width: 280px; height: auto; margin: -1rem auto -1.5rem; }
     .hero h1 { font-size: 1.6rem; }
     .hero-sub { font-size: 0.98rem; }
     .section-title { font-size: 2rem; }
@@ -618,10 +623,24 @@
     .hero-ctas { flex-direction: column; align-items: center; }
     section { padding: 4rem 1.5rem; }
     .parallax-divider { height: 40vh; }
-    .testimonial { font-size: 1.2rem; }
+    .testimonial { font-size: 1.1rem; }
     .parallax-divider .bg { background-attachment: scroll; }
-    .about-stat { gap: 2rem; }
+    .about-stat { grid-template-columns: 1fr; gap: 1.5rem; }
+    .contact-map iframe { width: 100%; height: 100%; margin: 0; }
     .nav-inner { padding: 0.8rem 1.5rem; }
+    .nav-hamburger { padding: 10px; }
+    .gate-box { padding: 2rem 1.5rem; }
+    .footer-bottom p { font-size: 0.82rem; }
+    .footer-col a { font-size: 0.92rem; }
+    .footer-col h4 { font-size: 0.78rem; }
+    .footer-legal a { font-size: 0.82rem; }
+  }
+  @media (max-width: 380px) {
+    .hero-ctas .btn-primary,
+    .hero-ctas .btn-secondary { width: 100%; text-align: center; }
+    section { padding: 3rem 1rem; }
+    .nav-inner { padding: 0.8rem 1rem; }
+    .hero-content { padding: 5rem 1rem 2.5rem; }
   }
 
   /* ── SCROLLBAR ──────────────────────── */

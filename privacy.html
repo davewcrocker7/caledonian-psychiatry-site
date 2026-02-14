@@ -315,15 +315,43 @@
     .policy-table tbody td { padding: 0.7rem 0.8rem; }
   }
   @media (max-width: 600px) {
-    .page-hero { padding: 8rem 1.5rem 3rem; }
+    html { font-size: 16px; }
+    body { text-align: left; }
+    .page-hero { padding: 6rem 1.5rem 3rem; }
     .page-hero h1 { font-size: 2.2rem; }
     .policy-content { padding: 3rem 1.5rem 4rem; }
     .policy-content h2 { font-size: 1.5rem; }
     .nav-inner { padding: 0.8rem 1.5rem; }
-    .policy-table {
-      display: block; overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+    .nav-hamburger { padding: 10px; }
+    .nav-logo img { height: 44px; width: 44px; }
+    .nav-logo-text { font-size: 1.3rem; }
+    .nav-logo-text span { font-size: 0.65rem; }
+    .gate-box { padding: 2rem 1.5rem; }
+    .footer-bottom p { font-size: 0.82rem; }
+    .footer-col a { font-size: 0.92rem; }
+    .footer-col h4 { font-size: 0.78rem; }
+    .footer-legal a { font-size: 0.82rem; }
+    .policy-table { display: block; }
+    .policy-table thead { display: none; }
+    .policy-table tbody { display: block; }
+    .policy-table tbody tr {
+      display: block; margin-bottom: 1rem;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 3px; padding: 1rem 1.2rem;
     }
+    .policy-table tbody td {
+      display: block; padding: 0.4rem 0;
+      border-bottom: none;
+    }
+    .policy-table tbody td::before {
+      content: attr(data-label);
+      display: block;
+      font-weight: 600; font-size: 0.75rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--navy); margin-bottom: 0.2rem;
+    }
+    .policy-table tbody tr:nth-child(even) { background: var(--white); }
+    .policy-table tbody tr:hover { background: var(--sage-pale); }
   }
 
   /* ── PASSWORD GATE ──────────────────── */
@@ -375,7 +403,7 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry" style="height:80px;width:80px;object-fit:contain;">
+      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry">
       <div class="nav-logo-text">Caledonian<br>Psychiatry <span>Private psychiatric care</span></div>
     </a>
     <div class="nav-links" id="navLinks">
@@ -471,44 +499,44 @@
     </thead>
     <tbody>
       <tr>
-        <td>Providing psychiatric assessment, diagnosis and treatment</td>
-        <td>Legitimate interests; consent</td>
-        <td>Provision of health care (Art. 9(2)(h))</td>
+        <td data-label="Purpose">Providing psychiatric assessment, diagnosis and treatment</td>
+        <td data-label="Lawful basis (Article 6)">Legitimate interests; consent</td>
+        <td data-label="Special category condition (Article 9)">Provision of health care (Art. 9(2)(h))</td>
       </tr>
       <tr>
-        <td>Prescribing medication and issuing prescriptions to pharmacies</td>
-        <td>Legitimate interests; legal obligation</td>
-        <td>Provision of health care (Art. 9(2)(h))</td>
+        <td data-label="Purpose">Prescribing medication and issuing prescriptions to pharmacies</td>
+        <td data-label="Lawful basis (Article 6)">Legitimate interests; legal obligation</td>
+        <td data-label="Special category condition (Article 9)">Provision of health care (Art. 9(2)(h))</td>
       </tr>
       <tr>
-        <td>Sharing clinical reports and correspondence with your GP</td>
-        <td>Consent; legitimate interests</td>
-        <td>Provision of health care (Art. 9(2)(h))</td>
+        <td data-label="Purpose">Sharing clinical reports and correspondence with your GP</td>
+        <td data-label="Lawful basis (Article 6)">Consent; legitimate interests</td>
+        <td data-label="Special category condition (Article 9)">Provision of health care (Art. 9(2)(h))</td>
       </tr>
       <tr>
-        <td>Maintaining accurate and complete clinical records</td>
-        <td>Legal obligation; legitimate interests</td>
-        <td>Provision of health care (Art. 9(2)(h))</td>
+        <td data-label="Purpose">Maintaining accurate and complete clinical records</td>
+        <td data-label="Lawful basis (Article 6)">Legal obligation; legitimate interests</td>
+        <td data-label="Special category condition (Article 9)">Provision of health care (Art. 9(2)(h))</td>
       </tr>
       <tr>
-        <td>Processing payments and financial administration</td>
-        <td>Performance of a contract; legitimate interests</td>
-        <td>N/A (not special category data)</td>
+        <td data-label="Purpose">Processing payments and financial administration</td>
+        <td data-label="Lawful basis (Article 6)">Performance of a contract; legitimate interests</td>
+        <td data-label="Special category condition (Article 9)">N/A (not special category data)</td>
       </tr>
       <tr>
-        <td>Responding to enquiries and managing appointments</td>
-        <td>Consent; legitimate interests</td>
-        <td>N/A (unless health data involved)</td>
+        <td data-label="Purpose">Responding to enquiries and managing appointments</td>
+        <td data-label="Lawful basis (Article 6)">Consent; legitimate interests</td>
+        <td data-label="Special category condition (Article 9)">N/A (unless health data involved)</td>
       </tr>
       <tr>
-        <td>Complying with regulatory requirements (e.g. Healthcare Improvement Scotland)</td>
-        <td>Legal obligation</td>
-        <td>Provision of health care (Art. 9(2)(h))</td>
+        <td data-label="Purpose">Complying with regulatory requirements (e.g. Healthcare Improvement Scotland)</td>
+        <td data-label="Lawful basis (Article 6)">Legal obligation</td>
+        <td data-label="Special category condition (Article 9)">Provision of health care (Art. 9(2)(h))</td>
       </tr>
       <tr>
-        <td>Protecting vital interests in an emergency (e.g. safeguarding, risk to life)</td>
-        <td>Vital interests</td>
-        <td>Vital interests (Art. 9(2)(c))</td>
+        <td data-label="Purpose">Protecting vital interests in an emergency (e.g. safeguarding, risk to life)</td>
+        <td data-label="Lawful basis (Article 6)">Vital interests</td>
+        <td data-label="Special category condition (Article 9)">Vital interests (Art. 9(2)(c))</td>
       </tr>
     </tbody>
   </table>

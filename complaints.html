@@ -298,13 +298,24 @@
     .footer-top { flex-direction: column; }
   }
   @media (max-width: 600px) {
-    .page-hero { padding: 8rem 1.5rem 3rem; }
+    html { font-size: 16px; }
+    body { text-align: left; }
+    .page-hero { padding: 6rem 1.5rem 3rem; }
     .page-hero h1 { font-size: 2rem; }
     .policy-content { padding: 3rem 1.5rem 4rem; }
     .policy-content h2 { font-size: 1.6rem; }
     .stage-block { padding: 1.2rem 1.5rem; }
     .contact-box { padding: 1.2rem 1.5rem; }
     .nav-inner { padding: 0.8rem 1.5rem; }
+    .nav-hamburger { padding: 10px; }
+    .nav-logo img { height: 44px; width: 44px; }
+    .nav-logo-text { font-size: 1.3rem; }
+    .nav-logo-text span { font-size: 0.65rem; }
+    .gate-box { padding: 2rem 1.5rem; }
+    .footer-bottom p { font-size: 0.82rem; }
+    .footer-col a { font-size: 0.92rem; }
+    .footer-col h4 { font-size: 0.78rem; }
+    .footer-legal a { font-size: 0.82rem; }
   }
 
   /* ── PASSWORD GATE ──────────────────── */
@@ -356,7 +367,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry" style="height:80px;width:80px;object-fit:contain;">
+      <img src="assets/logo-mark.png" alt="Caledonian Psychiatry">
       <div class="nav-logo-text">Caledonian<br>Psychiatry <span>Private psychiatric care</span></div>
     </a>
     <div class="nav-links" id="navLinks">
